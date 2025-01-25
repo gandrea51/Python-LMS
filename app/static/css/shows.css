@@ -1,0 +1,276 @@
+/* Header principale */
+.shows-header {
+    background: linear-gradient(135deg, #ff6b6b, #f1a7b5);
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Sezione interna dell'header */
+.show-header {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Titolo principale */
+.show-title {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Sottotitolo della domanda */
+.show-subtitle-question {
+    font-size: 1.5rem;
+    color: #f1f1f1;
+    font-style: italic;
+    margin-top: 10px;
+    font-weight: lighter;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query per schermi piccoli */
+@media (max-width: 768px) {
+    .show-title {
+        font-size: 2.2rem;
+    }
+
+    .show-subtitle-question {
+        font-size: 1.2rem;
+    }
+}
+
+/* Stile principale */
+.show-main {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    padding: 60px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    max-width: 1100px;
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.show-main:hover {
+    transform: scale(1.05);
+}
+
+/* Sezione Titoli */
+.show-main-titles {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.show-title-principal {
+    font-size: 3.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    --webkit-background-clip: text;
+    transition: all 0.3s ease;
+}
+
+.show-title-principal:hover {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    --webkit-background-clip: text;
+}
+
+.show-author {
+    font-size: 1.6rem;
+    color: #f1f1f1;
+    font-style: italic;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+/* Sezione Keywords */
+.show-keys {
+    margin-top: 40px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.key-title {
+    font-size: 2rem;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.key-data {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 1.6;
+    word-wrap: break-word;
+    padding-left: 10px;
+    border-left: 4px solid #4e54c8;
+    margin-top: 10px;
+}
+
+.key-data::before {
+    content: "📚";
+    font-size: 1.6rem;
+    margin-right: 10px;
+    color: #ff7e5f;
+}
+
+/* Effetto Hover su keywords */
+.show-keys:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Animazioni */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.show-title-principal, .show-author, .key-title, .key-data {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Media Queries per schermi piccoli */
+@media (max-width: 768px) {
+    .show-main {
+        padding: 40px 15px;
+    }
+
+    .show-title-principal {
+        font-size: 2.5rem;
+    }
+
+    .show-author {
+        font-size: 1.4rem;
+    }
+
+    .key-title {
+        font-size: 1.8rem;
+    }
+
+    .key-data {
+        font-size: 1.2rem;
+    }
+}
+/* Sezione secondaria */
+.show-secondary {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.show-secondary:hover {
+    transform: scale(1.05);
+}
+
+/* Titolo sezione secondaria */
+.sec-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    --webkit-background-clip: text;
+}
+
+/* Genere, Editore, Lingua, Formato */
+.sec-genre, .sec-publisher, .sec-language, .sec-format {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+/* Stile per le etichette (span) */
+.sec-genre span, .sec-publisher span, .sec-language span, .sec-format span {
+    font-size: 1.6rem;
+    color: #ffd700;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Sezione dati */
+.show-data {
+    background: #222;
+    color: #fff;
+    padding: 25px 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Data aggiunta */
+.data-added {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.data-added span {
+    color: #ff7e5f;
+    font-weight: bold;
+}
+
+/* Effetto hover per le sezioni */
+.show-secondary:hover, .show-data:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.show-secondary, .show-data, .sec-title, .sec-genre, .sec-publisher, .sec-language, .sec-format {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+    .show-secondary {
+        padding: 25px 15px;
+    }
+
+    .sec-title {
+        font-size: 2rem;
+    }
+
+    .sec-genre, .sec-publisher, .sec-language, .sec-format {
+        font-size: 1.2rem;
+    }
+
+    .data-added {
+        font-size: 1.2rem;
+    }
+}

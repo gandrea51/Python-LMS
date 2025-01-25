@@ -1,0 +1,106 @@
+/* Overall breadcrumb container */
+.breadcrumb {
+    background: linear-gradient(45deg, rgba(255, 182, 193, 0.9), rgba(255, 99, 71, 0.9));
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation style */
+.breadcrumb nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Breadcrumb list */
+.breadcrumb ol {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Breadcrumb items */
+.breadcrumb-item {
+    display: inline-block;
+    margin-right: 15px;
+    position: relative;
+}
+
+/* Breadcrumb links */
+.breadcrumb-item a {
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumb-item a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #f0f8ff;
+    transform: translateY(-3px);
+}
+
+/* Separator between breadcrumb items */
+.breadcrumb-item:not(:last-child)::after {
+    content: "›";
+    color: #fff;
+    font-size: 1.4rem;
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.8;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item:not(:last-child):hover::after {
+    color: #f0f8ff;
+    opacity: 1;
+}
+
+/* Active breadcrumb item */
+.breadcrumb-item.active {
+    color: #f8f8f8;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Hover and transition effects */
+.breadcrumb-item a {
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+    background-color: #ff69b4;
+    color: #ffffff;
+    transform: translateY(-4px);
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 767px) {
+    .breadcrumb ol {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
+    }
+
+    .breadcrumb-item {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .breadcrumb-item a {
+        font-size: 1.1rem;
+    }
+
+    .breadcrumb-item::after {
+        display: none;
+    }
+}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %}My chat{% endblock %}
+{% block style %}<link rel="stylesheet" href="/static/css/chat.css">{% endblock %}
+{% block main %}
+
+    <header class="chat-header">
+        <section class="chat-head">
+            <h2 class="chat-title">Welcome to Your Chat</h2>
+            <h4 class="chat-subtitle">We're here to help you, ask away!</h4>
+        </section>
+    </header>
+
+    <main class="chat-main">
+        <section class="chat-list">
+            <ul class="question-block">
+                {% for question in questions %}
+                    <li class="question-item">{{ question.content }} ({{ 'Answered' if question.answered else 'Pending' }})</li>
+                {% else %}
+                    <li class="no-questions">No questions yet! Start the conversation!</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <section class="chat-write">
+            <section class="chat-write-head">
+                <h2 class="chat-write-title">Have a question? We’re listening!</h2>
+                <h4 class="chat-write-subtitle">Write your query below and hit send.</h4>
+            </section>
+
+            <section class="chat-write-body">
+                <form method="POST" action="/chat" class="write-message" id="chatForm">
+                    <textarea name="content" placeholder="Type your question here..." rows="1"></textarea>
+                    <button type="submit">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+                
+            </section>
+        </section>
+    </main>
+        
+{% endblock %}
+{% block js %}<script src="/static/js/chat.js"></script>{% endblock %}

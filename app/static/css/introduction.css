@@ -1,0 +1,380 @@
+/* Navbar Background Gradient */
+.navbar {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #ffdf00;
+}
+
+/* Navbar Links */
+.nav-link {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-right: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects for Navbar Links */
+.nav-link:hover {
+    color: #000;
+    background-color: #ffdf00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Adding Animated Effects to Navbar Toggler Icon */
+.navbar-toggler {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    background-color: #ffdf00;
+    transform: scale(1.1);
+}
+
+/* Active link with underline effect */
+.nav-link.active {
+    border-bottom: 2px solid #ffdf00;
+}
+
+/* Responsive Navbar: Add More Spacing in Mobile View */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+}
+
+/* Background Image and Gradient */
+.header-area {
+    background: linear-gradient(135deg, rgba(6, 20, 61, 0.7), rgba(0, 174, 255, 0.6)), url('/static/images/intro/covers.jpg') center/cover no-repeat;
+    height: 100vh;  /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header Section Styling */
+.first-part-header {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Main Title */
+.the-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #FF4B2B, #FF416C);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glow 1.5s infinite alternate;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+/* Subtitle */
+.the-subtitle {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    font-weight: 500;
+    color: #ffdf00;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+/* Motto */
+.the-motto {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    font-weight: 300;
+    color: #ddd;
+    letter-spacing: 2px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effects for Titles */
+.first-part-header:hover .the-title {
+    transform: scale(1.1) rotate(-5deg);
+    color: #fff;
+}
+
+/* Glow Effect for the Title */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 20px #ff4b2b, 0 0 30px #ff4b2b, 0 0 40px #ff416c;
+    }
+    100% {
+        text-shadow: 0 0 30px #ff4b2b, 0 0 50px #ff4b2b, 0 0 70px #ff416c;
+    }
+}
+
+/* Add effects when hovering over subtitle and motto */
+.first-part-header:hover .the-subtitle {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: translateY(-5px);
+}
+
+.first-part-header:hover .the-motto {
+    color: #ffdf00;
+    transform: translateY(5px);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .the-title {
+        font-size: 2.5rem;
+    }
+    .the-subtitle {
+        font-size: 1.2rem;
+    }
+    .the-motto {
+        font-size: 1.1rem;
+    }
+}
+
+/* Main Area Background */
+.main-area {
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* Section Backgrounds */
+.area-HowToReach {
+    background: linear-gradient(145deg, rgba(0, 174, 255, 0.9), rgba(0, 30, 100, 0.9)), 
+                url('block1-background.jpg') center/cover no-repeat;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 1200px;
+    animation: fadeIn 2s ease;
+}
+.come-on-car {
+    background: url('/static/images/intro/car-cover.jpg') center/cover no-repeat;
+}
+.come-on-bus {
+    background: url('/static/images/intro/bus-cover.jpg') center/cover no-repeat;
+}
+/* Titles */
+.come-on-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #f85032, #e73827);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glowTitle 1.5s infinite alternate;
+}
+
+/* Subtitles for Car & Bus */
+.car-title, .bus-title {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #ffdf00;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffdf00;
+}
+
+/* List Styles */
+.list-group {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.car-item, .bus-item {
+    background: linear-gradient(45deg, #8c2ef1, #4e80d4);
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* List Item Hover */
+.car-item:hover, .bus-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowTitle {
+    0% {
+        text-shadow: 0 0 10px #f85032, 0 0 20px #e73827, 0 0 30px #e73827;
+    }
+    100% {
+        text-shadow: 0 0 20px #f85032, 0 0 30px #e73827, 0 0 40px #e73827;
+    }
+}
+
+/* Footer Area */
+.footer-area {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    padding: 50px 20px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Section Styling */
+.the-ft-first {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Titles */
+.the-ft-title,
+.the-ft-lk-title,
+.the-ft-at-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: glowTitle 1.5s infinite alternate;
+}
+
+/* Text Styling */
+.the-ft-pg,
+.the-ft-action p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Links */
+.the-ft-list {
+    list-style: none;
+    padding: 0;
+}
+
+.the-ft-item {
+    margin-bottom: 10px;
+}
+
+.the-ft-item a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.the-ft-item a:hover {
+    color: #ffdf00;
+    transform: scale(1.1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    animation: fadeIn 2s ease;
+}
+
+/* Background Animation */
+.footer-area::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    animation: moveBg 10s linear infinite;
+    z-index: 0;
+}
+
+/* Adjust Section Z-index */
+.footer-area > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animations */
+@keyframes glowTitle {
+    0% {
+        text-shadow: 0 0 10px #ff9a9e, 0 0 20px #fad0c4, 0 0 30px #fad0c4;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff9a9e, 0 0 30px #fad0c4, 0 0 40px #fad0c4;
+    }
+}
+
+@keyframes moveBg {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(50%, 50%);
+    }
+}

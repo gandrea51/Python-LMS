@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+{% block title %}Books{% endblock %}
+{% block style %}<link rel="stylesheet" href="/static/css/books.css">{% endblock %}
+{% block main %}
+
+    <header class="book-header">
+        <section class="book-page-header">
+            <h2 class="book-header-title">Discover our books</h2>
+            <h4 class="book-header-subtitle">Discover new worlds with the available books and broaden your horizons. Explore a collection filled with unique stories and timeless classics.</h4>
+        </section>
+    </header>
+
+    <main class="book-main">
+        <section class="book-research">
+            <h3 class="book-research-title">Find Your Next Favorite Book</h3>
+            <h5 class="book-research-subtitle">Use the search functionality below to quickly find books by title, author, or keywords.</h5>
+
+            <section class="book-search-keywords">
+                <form class="book-search-form" action="/book/keyword" method="post">
+                    <section class="form-group mb-3">
+                        <label for="keywords" class="form-label">Keywords</label>
+                        <input type="text" class="form-control" id="keywords" name="keywords" placeholder="Enter keywords such as 'adventure', 'mystery', etc.">
+                        <section id="keywords" class="form-text">Enter keywords to start the search</section>
+                    </section>
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            <section class="form-alt">
+                                <section class="form-messages">
+                                    <ul class="form-messages-list">
+                                        {% for category, message in messages %}
+                                            <li class="form-message-item">{{ message }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </section>
+                            </section>
+                        {% endif %}
+                    {% endwith %}
+
+                    <button type="submit" class="search-button">Start the search!</button>
+                </form>
+            </section>
+        </section>
+
+        <section class="book-three-type">
+            <section class="book-item">
+                <h3 class="book-title">Realise: {{ realise.title }}</h3>
+                <p class="book-author"><strong>Author:</strong> {{ realise.author }}</p>
+                <p class="book-keywords"><strong>Keywords:</strong> {{ realise.keywords }}</p>
+                <img src="{{ realise.cover }}" alt="Cover of {{ realise.title }}" class="book-cover">
+            </section>
+        
+            <section class="book-item">
+                <h3 class="book-title">Classic: {{ classic.title }}</h3>
+                <p class="book-author"><strong>Author:</strong> {{ classic.author }}</p>
+                <p class="book-keywords"><strong>Keywords:</strong> {{ classic.keywords }}</p>
+                <img src="{{ classic.cover }}" alt="Cover of {{ classic.title }}" class="book-cover">
+            </section>
+        
+            <section class="book-item">
+                <h3 class="book-title">New: {{ new.title }}</h3>
+                <p class="book-author"><strong>Author:</strong> {{ new.author }}</p>
+                <p class="book-keywords"><strong>Keywords:</strong> {{ new.keywords }}</p>
+                <img src="{{ new.cover }}" alt="Cover of {{ new.title }}" class="book-cover">
+            </section>
+        </section>
+        
+        <section class="book-genres">
+            <section class="book-find">
+                <h2 class="search-title">Discover the genres</h2>
+                <p class="search-description">
+                    Use the search bar below to quickly find books by their genre. Simply start typing, and the list will update dynamically.
+                </p>
+                <input type="text" placeholder="Search for the genre of a book..." aria-label="Search books" class="genre-input">
+            </section>
+
+            <section class="book-dynamic-list">
+                <ul class="dynamic-list">
+                    {% for genre in genres %}
+                        <li class="dynamic-item">
+                            <form method="POST" action="/book/genre">
+                                <input type="hidden" name="genre" value="{{ genre.genre }}">
+                                <button type="submit" class="genre-form-button">
+                                    <section class="genre-details">
+                                        <h4 class="genre-name">
+                                            {{ genre.genre }}
+                                        </h4>
+                                    </section>
+                                </button>
+                            </form>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+            </section>
+        </section>
+
+
+        {% if current.role != "user" %}
+        <section class="manage-area">
+            <a href="/book/manager" class="manage-button"><i class="fa fa-solid fa-clipboard"></i></a>
+        </section>
+        {% endif %}
+
+    </main>
+
+
+{% endblock %}
+{% block js %}
+    <script src="/static/js/book.js"></script>
+{% endblock %}

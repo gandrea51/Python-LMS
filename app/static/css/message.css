@@ -1,0 +1,392 @@
+/* Reset generali */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #f4f7ff, #d3e9ff);
+    color: #333;
+}
+
+/* HEADER */
+.message-header {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.message-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+/* MAIN */
+.message-main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* SEZIONE NORMAL MESSAGES */
+.normal-messages {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* HEADER DELLA SEZIONE NORMAL */
+.normal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.normal-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6a11cb;
+}
+
+.normal-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* GRUPPO DI MESSAGGI NORMAL */
+.normal-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* MESSAGGI INDIVIDUALI */
+.normal-item {
+    background: linear-gradient(135deg, #ffffff, #e9f0ff);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.normal-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Testata del messaggio */
+.normal-head-message {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2575fc;
+    margin-bottom: 10px;
+}
+
+/* Corpo del messaggio */
+.normal-head-body {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Data del messaggio */
+.normal-foot-date {
+    font-size: 1rem;
+    color: #888;
+    text-align: right;
+    font-style: italic;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+    .message-header {
+        padding: 20px;
+    }
+
+    .message-title {
+        font-size: 2rem;
+    }
+
+    .message-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .normal-title {
+        font-size: 1.8rem;
+    }
+
+    .normal-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .normal-item {
+        padding: 15px;
+    }
+}
+
+/* URGENT MESSAGE SECTION */
+.urgent-message {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* HEADER DELLA SEZIONE URGENT */
+.urgent-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.urgent-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d9534f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.urgent-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* GRUPPO DI MESSAGGI URGENT */
+.urgent-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* MESSAGGI INDIVIDUALI */
+.urgent-item {
+    background: linear-gradient(135deg, #ffe5e0, #f7bfc7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.urgent-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Testata del messaggio */
+.urgent-head-message {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+/* Corpo del messaggio */
+.urgent-head-body {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Data del messaggio */
+.urgent-foot-date {
+    font-size: 1rem;
+    color: #888;
+    text-align: right;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* PULSANTE RISPOSTA */
+.answer-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #d9534f;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.answer-button:hover {
+    background: #c9302c;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.answer-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(217, 83, 79, 0.8);
+}
+
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+    .urgent-group {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .urgent-title {
+        font-size: 1.8rem;
+    }
+
+    .urgent-subtitle {
+        font-size: 1rem;
+    }
+
+    .urgent-item {
+        padding: 15px;
+    }
+
+    .answer-button {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* URGENT ITEM */
+.urgent-item {
+    background: linear-gradient(135deg, #fff5f5, #ffe3e3);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FORM HIDDEN */
+.answer-to {
+    display: none;
+    margin-top: 15px;
+}
+
+/* ANIMATION (OPTIONAL) */
+.urgent-item * {
+    transition: all 0.3s ease;
+}
+
+/* STILE GENERALE DEL FORM */
+.answer-to {
+    display: none; /* Nascosto di default */
+    background: linear-gradient(135deg, #fef9f9, #fde1e1);
+    border: 2px solid #ffc9c9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* GRUPPO FORM */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* LABEL DEL FORM */
+.form-label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ff6f6f;
+    margin-bottom: 5px;
+}
+
+/* TEXTAREA */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ffc9c9;
+    border-radius: 8px;
+    resize: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fffdfd;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #ff6f6f;
+    box-shadow: 0 0 10px rgba(255, 111, 111, 0.5);
+}
+
+/* TESTO INFORMATIVO DEL FORM */
+.form-text {
+    font-size: 0.9rem;
+    color: #999;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+.form-text:hover {
+    color: #ff6f6f;
+}
+
+/* PULSANTE DI INVIO */
+.save-the-message {
+    background: linear-gradient(135deg, #ff6f6f, #ff3d3d);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.save-the-message:hover {
+    background: linear-gradient(135deg, #ff3d3d, #e32b2b);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 61, 61, 0.2);
+}
+
+.save-the-message:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 61, 61, 0.5);
+}
+
+/* ANIMAZIONI */
+.answer-to.show {
+    display: block; /* Mostra il form */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

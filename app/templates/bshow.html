@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block title %}Books{% endblock %}
+{% block style %}
+    <link rel="stylesheet" href="/static/css/shows.css">
+{% endblock %}
+{% block main %}
+
+    <header class="shows-header">
+        <section class="show-header">
+            <h2 class="show-title">Broaden your horizons</h2>
+            <h4 class="show-subtitle-question">Is This Your Next Favorite Book?</h4>
+        </section>
+    </header>
+
+    <main class="show-main">
+        <section class="show-main-titles">
+            <h3 class="show-title-principal">{{book.title}}</h3>
+            <h5 class="show-author">{{book.author}}</h5>
+        </section>
+
+        <section class="show-keys">
+            <h4 class="key-title">The keywords of the book</h4>
+            <p class="key-data">{{book.keywords}}</p>
+        </section>  
+
+        <section class="show-secondary">
+            <h4 class="sec-title"></h4>
+            <p class="sec-genre"><span>Genre: </span>{{book.genre}}</p>
+            <p class="sec-publisher"><span>Publisher: </span>{{book.publisher}}</p>
+            
+            <p class="sec-language"><span>Written in the language: </span>{{book.language}}</p>
+            
+            <p class="sec-format"><span>Available in the format: </span>{{book.format}}</p>
+        </section>
+
+        <section class="show-data">
+            <p class="data-added"><span>Available from: </span>{{book.added_date}}</p>
+        </section>
+    </main>
+
+{% endblock %}
+{% block js %}
+    <script src="/static/js/book_shows.js"></script>
+{% endblock %}

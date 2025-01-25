@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <meta name="author" content="100Book Team">
+        <meta name="description" content="100Book: Simplifying Development, Empowering Solutions">
+        <meta name="keywords" content="Code Smart, Innovate Faster">
+        <meta name="robots" content="index, follow">
+        
+        <meta property="og:title" content="Welcome on NovaLib">
+        <meta property="og:description" content="100Book: Simplifying Development, Empowering Solutions">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+    
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Welcome on 100Book">
+        <meta name="twitter:description" content="Simplifying Development, Empowering Solutions.">
+        <meta name="twitter:image" content="">
+    
+        <link rel="icon" type="image/png" href="/static/images/icon.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Roboto:wght@300;500&display=swap">
+        <link rel="stylesheet" href="/static/css/introduction.css">
+        <link rel="stylesheet" href="/static/css/layout.css">
+        {% block style %}{% endblock %}
+    
+        <title>100Book - {% block title %}{% endblock %}</title>
+    </head>
+    <body class="body-with-replacement">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <section class="container-fluid">
+                <a class="navbar-brand" href="/">100Book</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-solid fa-snowflake"></i>
+                </button>
+                <section class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/about"><i class="fa fa-solid fa-heart"></i> About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/explore"><i class="fa fa-solid fa-earth-europe"></i> Explore</a></li>
+                        {% if not current.is_authenticated %}
+                            <li class="nav-item"><a class="nav-link" href="/sign"><i class="fa fa-solid fa-user-plus"></i> Sign Up</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/signin"><i class="fa fa-solid fa-right-to-bracket"></i> Sign In</a></li>
+                        {% else %}
+                            {% if current.role != "user" %}
+                                <li class="nav-item"><a class="nav-link" href="/question"><i class="fa fa-envelope"></i> Messages</a></li>  
+                            {% endif %}  
+                                <li class="nav-item"><a class="nav-link" href="/user/{{current.id}}"><i class="fa fa-solid fa-user-secret"></i> Your Profile</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/signout"><i class="fa fa-solid fa-user-minus"></i> Logout</a></li>                                            
+                        {% endif %}
+                    </ul>
+                </section>
+            </section>
+        </nav>
+
+        <main class="the-main-replace">{% block main %}{% endblock %}</main>
+        
+
+        <footer class="footer-area">
+            <section class="the-ft-first">
+                <section class="the-ft-first-about">
+                    <h3 class="the-ft-title">100Book</h3>
+                    <p class="the-ft-pg">Code Smart, Innovate Faster</p>
+                </section>
+                <section class="the-ft-links">
+                    <h3 class="the-ft-lk-title">Link Utili</h3>
+                    <ul class="the-ft-list">
+                        <li class="the-ft-item"><a href="/about"><i class="fa fa-solid fa-circle-info"></i> About us</a></li>
+                        <li class="the-ft-item"><a href="/explore"><i class="fa fa-solid fa-earth-americas"></i> Explore</a></li>
+                    </ul>
+                </section>
+                <section class="the-ft-action">
+                    <h3 class="the-ft-at-title">Contact</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Knowledge Street, 123, Bern</p>
+                    <p><i class="fas fa-phone"></i> +39 0532 123456</p>
+                    <p><i class="fas fa-envelope"></i> info@100book.ch</p>
+                </section>
+            </section>
+            <section class="footer-bottom">
+                <p>&copy; 2024 100Book. All rights reveserved.</p>
+            </section>
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/static/js/intro.js"></script>
+        {% block js %}{% endblock %}
+    </body>
+</html>

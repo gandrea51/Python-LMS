@@ -1,0 +1,286 @@
+/* Header Styles */
+.manage-header {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #ff4b5c;
+}
+
+.manage-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.manage-sub {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+/* Main Section */
+.manage-main {
+    background: linear-gradient(135deg, #d6d330, #71d343);
+    padding: 3rem 2rem;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Search Section */
+.manage-search {
+    background: linear-gradient(90deg, #6dd5fa, #2980b9);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.search-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.search-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: rgb(48, 15, 15);
+}
+
+.manage-search input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(-135deg, #d6d330, #71d343);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Dynamic List Section */
+.manage-dynamic-list {
+    background: linear-gradient(135deg, #d6a360, #e8eb54);
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.list-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.list-description {
+    font-size: 1rem;
+    color: #0f292b;
+    margin-bottom: 1.5rem;
+}
+
+/* List Items */
+.dynamic-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dynamic-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(-135deg, #d6a360, #e8eb54);
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dynamic-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.book-details {
+    flex: 3;
+}
+
+.book-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.book-author {
+    font-size: 1rem;
+    color: #123638;
+}
+
+.book-summary {
+    font-size: 0.9rem;
+    color: #0f2f31;
+    margin-top: 0.5rem;
+}
+
+/* Buttons */
+.book-actions {
+    display: flex;
+    gap: 1rem;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.action-button {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.edit-button {
+    background: #3498db;
+    color: white;
+}
+
+.edit-button:hover {
+    background: #2980b9;
+    transform: scale(1.05);
+}
+
+.delete-button {
+    background: #e74c3c;
+    color: white;
+}
+
+.delete-button:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Sezione di aggiunta libro */
+.manage-add {
+    background: linear-gradient(135deg, #d6a360, #e8eb54);
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.manage-add:hover {
+    transform: scale(1.05);
+}
+
+/* Titolo della sezione */
+.add-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(45deg, #fff, #ff9900);
+    --webkit-background-clip: text;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Descrizione */
+.add-description {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+}
+
+.add-description:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Pulsante di aggiunta */
+.add-button {
+    display: inline-block;
+    background: linear-gradient(145deg, #ff9900, #e8eb54);
+    color: white;
+    font-size: 1.3rem;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.add-button .add-button-text {
+    z-index: 2;
+}
+
+.add-button:hover {
+    background: linear-gradient(145deg, #ff9900, #d6a360);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    color: #ffffff;
+}
+
+.add-button .add-button-icon {
+    font-size: 1.6rem;
+    margin-left: 15px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.add-button:hover .add-button-icon {
+    transform: translateY(-50%) scale(1.2);
+}
+
+/* Effetto Hover */
+.manage-add:hover .add-button {
+    background: linear-gradient(145deg, #ff9900, #ffb84d);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.manage-add::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: ripple 1.5s infinite;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0) translate(-50%, -50%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2) translate(-50%, -50%);
+        opacity: 0;
+    }
+}

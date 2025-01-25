@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block title %}Books{% endblock %}
+{% block style %}<link rel="stylesheet" href="/static/css/manage.css">{% endblock %}
+{% block main %}
+
+    <header class="manage-header">
+        <section class="manage-first-block">
+            <h2 class="manage-title">Manage the collection books</h2>
+            <h4 class="manage-sub">This way you won't lose anything, and you can only benefit from it.</h4>
+        </section>
+    </header>
+
+    <main class="manage-main">
+        <!-- Search Section -->
+        <section class="manage-search">
+            <h2 class="search-title">Book Management</h2>
+            <p class="search-description">
+                Use the search bar below to quickly find books by their title or author. Simply start typing, and the list will update dynamically.
+            </p>
+            <input type="text" placeholder="Search for the title or author of a book..." aria-label="Search books">
+        </section>
+
+        <!-- Add section -->
+        <section class="manage-add">
+            <h2 class="add-title">Add a New Book</h2>
+            <p class="add-description">
+                To expand our collection, you can easily add a new book. Just click the button below to start the process and provide the necessary details.
+            </p>
+            <a href="/book/create" class="add-button">
+                <span class="add-button-text">Add a New Book</span>
+            </a>
+        </section>
+    
+        <!-- Dynamic List Section -->
+        <section class="manage-dynamic-list">
+            <h3 class="list-title">Available Books</h3>
+            <p class="list-description">
+                Below is a list of books currently in the collection. Use the search feature to filter results based on your preferences.
+            </p>
+            <ul class="dynamic-list">
+                {% for book in books %}
+                    <li class="dynamic-item">
+                        <section class="book-details">
+                            <h4 class="book-title">{{ book.title }}</h4>
+                            <p class="book-author"><strong>Author:</strong> {{ book.author }}</p>
+                            <p class="book-summary">
+                                {{ book.keywords }}
+                            </p>
+                        </section>
+                        <section class="book-actions">
+                            <a class="action-button edit-button" href="/book/{{book.id}}/edit">Edit</a>
+                            <a class="action-button delete-button" href="/book/{{book.id}}/drop">Delete</a>
+                        </section>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+
+{% endblock %}
+{% block js %}
+    <script src="/static/js/manage_book.js"></script>
+{% endblock %}

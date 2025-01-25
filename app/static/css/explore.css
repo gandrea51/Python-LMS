@@ -1,0 +1,122 @@
+/* General Styles for Header */
+.explore-header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #feb47b);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: header-fade-in 1s ease-in-out;
+}
+
+.exp-hd-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.exp-hd-sub, .exp-hd-subspace {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    font-style: italic;
+    color: #fdfdfd;
+}
+
+/* Main Section Styles */
+.explore-main {
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    padding: 3rem;
+}
+
+.main-first-area {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.block-for-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+/* Article Styling */
+article {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+article:hover img {
+    transform: scale(1.1);
+}
+
+.the-book-title, .the-space-title, .the-course-title {
+    font-size: 1.8rem;
+    color: #333;
+    font-weight: bold;
+    margin: 1rem 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.the-book-pg, .the-space-pg, .the-course-pg {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+a.the-book-a, a.the-space-a, a.the-course-a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, #ff758c, #feb47b);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 5px 10px rgba(255, 117, 140, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+a.the-book-a:hover, a.the-space-a:hover, a.the-course-a:hover {
+    background: linear-gradient(90deg, #feb47b, #ff7eb3);
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 117, 140, 0.6);
+}
+
+/* Keyframes */
+@keyframes header-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

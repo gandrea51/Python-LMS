@@ -1,0 +1,353 @@
+/* Contenitore principale */
+.profile-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+/* Contenitore per la divisione delle due colonne */
+.profile-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Colonna stretta (30%) */
+.profile-left {
+    flex: 0 0 30%;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.profile-img {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Colonna larga (70%) */
+.profile-right {
+    flex: 1;
+    padding-left: 20px;
+}
+
+/* Stile per gli articoli (Email e Password) */
+article {
+    background: #fff;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Titoli degli articoli */
+.user-email-title, .user-password-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Testo degli articoli */
+.user-email-pg, .user-password-pg {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Link per la modifica */
+.user-change {
+    font-size: 1.4rem;
+    color: #4e54c8;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.user-change:hover {
+    color: #feb47b;
+}
+
+/* Media Queries per schermi piccoli */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .profile-right {
+        width: 100%;
+    }
+
+    .profile-img {
+        width: 60%;
+    }
+
+    article {
+        padding: 20px;
+    }
+}
+
+/* Stile header */
+.profile-header {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.profile-header:hover {
+    transform: scale(1.05);
+}
+
+/* Titolo principale */
+.prf-hd-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    --webkit-background-clip: text;
+    transition: all 0.3s ease;
+}
+
+.prf-hd-title:hover {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    --webkit-background-clip: text;
+}
+
+/* Sottotitolo */
+.prf-hd-sub {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 10px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* Animazioni */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.profile-header, .prf-hd-title, .prf-hd-sub {
+    animation: slideIn 0.6s ease-out;
+}
+
+/* Media Queries per schermi piccoli */
+@media (max-width: 768px) {
+    .profile-header {
+        padding: 40px 15px;
+    }
+
+    .prf-hd-title {
+        font-size: 2.5rem;
+    }
+
+    .prf-hd-sub {
+        font-size: 1.4rem;
+    }
+}
+/* Footer */
+.foot-information {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.foot-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Titolo del footer */
+.foot-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    --webkit-background-clip: text;
+}
+
+/* Descrizione del footer */
+.foot-description {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+/* Form */
+.urgent-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Gruppo del form */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Etichetta */
+.form-label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* Input e Textarea */
+.form-control {
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+
+.form-control:focus {
+    border-color: #feb47b;
+}
+
+/* Testo di aiuto sotto i campi */
+.form-text {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 5px;
+    text-align: left;
+}
+
+/* Effetto hover sul form */
+.urgent-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Pulsante di invio */
+.urgent-form button {
+    padding: 14px 20px;
+    font-size: 1.4rem;
+    background-color: #feb47b;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.urgent-form button:hover {
+    background-color: #ff7e5f;
+}
+
+/* Media Queries per schermi piccoli */
+@media (max-width: 768px) {
+    .foot-title {
+        font-size: 2rem;
+    }
+
+    .foot-description {
+        font-size: 1.3rem;
+    }
+
+    .urgent-form {
+        padding: 20px;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .form-label {
+        font-size: 1.2rem;
+    }
+
+    .form-text {
+        font-size: 0.9rem;
+    }
+}
+/* Pulsante Confirm */
+.save-the-message {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 16px 32px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Effetto hover */
+.save-the-message:hover {
+    background: linear-gradient(45deg, #feb47b, #ff7e5f);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Effetto focus */
+.save-the-message:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 168, 94, 0.7);
+}
+
+/* Effetto quando è disabilitato */
+.save-the-message:disabled {
+    background: #ddd;
+    color: #bbb;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Animazione di ingresso */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Aggiungi animazione di pulsazione */
+.save-the-message {
+    animation: pulse 1.5s infinite ease-in-out;
+}

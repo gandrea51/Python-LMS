@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block title %}About us{% endblock %}
+{% block style %}<link rel="stylesheet" href="/static/css/about.css">{% endblock %}
+{% block main %}
+
+    <header class="about-header">
+        <section class="header-abt">
+            <h2 class="abt-title">Who we are</h2>
+            <h5 class="abt-sub">A team dedicated to shared knowledge and innovation.</h5>
+        </section>
+    </header>
+
+    <main class="owr-people">
+        <section class="the-founder">
+            <h2 class="role-title">Founders</h2>
+            <section class="image-left-of-description">
+                <img src="/static/images/intro/founders.jpg" alt="The founders" class="image-to-left">
+            </section>
+            <article class="person-profile">
+                <h3 class="person-name">Alexander Bennett & Olivia Bennett</h3>
+                <p class="person-description">
+                    Alexander and Olivia Bennett, the visionary couple behind the creation of 100Book, share a passion for literature and innovation. 
+                    Alexander, an avid historian with a knack for strategy, laid the foundation for the bookstore's operations and growth. 
+                    Olivia, a former editor and literary enthusiast, shaped the creative and community-focused aspects of the business. 
+                    Together, they dreamed of a space that blends traditional bookselling with modern technology, creating a hub for readers, learners, and creators.
+                </p>
+            </article>
+        </section>
+        
+        <section class="the-manager">
+            <h2 class="role-title">Manager</h2>
+            <article class="person-profile">
+                <h3 class="person-name">Sofia Garcia</h3>
+                <p class="person-description">
+                    Sofia Garcia, the dynamic and resourceful manager of 100Book, ensures the bookstore operates smoothly. With years of 
+                    experience in retail and customer service, Sofia excels at team leadership and problem-solving. Her warm personality and keen business 
+                    acumen make her approachable to customers and a source of inspiration for staff. Sofia believes every visitor deserves an exceptional 
+                    experience, blending efficiency with a personal touch.
+                </p>
+            </article>
+            <section class="image-right-of-description">
+                <img src="/static/images/intro/manager.jpg" alt="The manager" class="image-to-tight">
+            </section>
+        </section>
+        
+        <section class="the-creator">
+            <h2 class="role-title">Content Creator</h2>
+            <section class="image-left-of-description">
+                <img src="/static/images/intro/creator.jpg" alt="The creator" class="image-to-left">
+            </section>
+            <article class="person-profile">
+                <h3 class="person-name">Mia Anderson</h3>
+                <p class="person-description">
+                    Mia Anderson, the creative force behind 100Book's online presence, is a talented content creator who transforms the bookstore’s vision 
+                    into engaging visuals and stories. Whether crafting blog posts, curating social media campaigns, or organizing virtual book clubs, 
+                    Mia’s innovative ideas keep the brand fresh and relatable. A literature graduate with a flair for design, Mia bridges the gap between books and digital storytelling.
+                </p>
+            </article>
+        </section>
+        
+        <section class="the-librarians">
+            <h2 class="role-title">Librarians</h2>
+            <article class="person-profile">
+                <h3 class="person-name">Samuel Wright & Emily Patel</h3>
+                <p class="person-description">
+                    Samuel Wright and Emily Patel are the knowledgeable and friendly librarians of 100Book, dedicated to connecting readers with the perfect stories. 
+                    Samuel, a former literature professor, brings depth and expertise to curating the store’s unique collections. Emily, with her background 
+                    in youth education, excels at organizing events like storytime for kids and literary discussions for young adults. Together, they create 
+                    a welcoming atmosphere where every reader feels at home.
+                </p>
+            </article>
+            <section class="image-right-of-description">
+                <img src="/static/images/intro/librarian.jpg" alt="The librarians" class="image-to-tight">
+            </section>
+        </section>
+    </main>
+
+    <!--<footer class="about-contact">
+        <h3 class="contact-title">Every great project begins with a conversation. Start yours with us!</h3>
+        <h5 class="contact-sub">Don't hesitate: your message could be the start of something extraordinary!</h5>
+        <form method="post" action="/inscribe" class="contact-form">
+            <section class="form-group">
+                <label for="name" class="form-label">Your name</label>
+                <input required type="text" class="form-control" id="name" name="name" placeholder="Thomas Stearns Eliot">
+                <section id="name" class="form-text">What's your name?</section>
+            </section>
+
+            <section class="form-group">
+                <label for="message" class="form-label">Your message</label>
+                <textarea required class="form-control" id="message" name="message" rows="3" placeholder="Write your message"></textarea>
+                <section id="message" class="form-text">What's your message?</section>
+            </section>
+
+            <button type="submit" class="save-the-message">Confirm</button>
+        </form>
+    </footer>-->
+{% endblock %}
+
+{% block js %}<script src="/static/js/about.js"></script>{% endblock %}

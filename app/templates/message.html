@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block title %}The Message{% endblock %}
+{% block style %}<link rel="stylesheet" href="/static/css/message.css">{% endblock %}
+{% block main %}
+
+    <header class="message-header">
+        <h2 class="message-title">Read all the messages</h2>
+        <h4 class="message-subtitle">Manage and Organize incoming messages and respond to urgent ones</h4>
+    </header>
+
+    <main class="message-main">
+        
+        <section class="urgent-message">
+            <section class="urgent-header">
+                <h3 class="urgent-title">Read the urgent messages</h3>
+                <h5 class="urgent-subtitle">Browse and respond to urgent requests</h5>
+            </section>
+
+            <section class="urgent-group">
+                <section class="urgent-group">
+                    {% for urgent in urgents %}
+                        <section class="urgent-item">
+                            <section id="answer{{ urgent.id }}">
+                                <h5 class="urgent-head-message">{{urgent.name}} Has Written:</h5>
+                                <p class="urgent-head-body">{{urgent.message}}</p>
+                                <p class="urgent-foot-date">On {{urgent.created_at}}</p>
+                            </section>
+
+                            <button class="answer-button" type="button" onclick="toggleForm('answer{{ urgent.id }}', 'form{{ urgent.id }}')">
+                                Answer now
+                            </button>
+
+                            <form id="form{{ urgent.id }}" class="answer-to" method="POST" action="/answer/{{urgent.id}}" style="display: none;">
+                                
+                                <section class="form-group">
+                                    <label for="body" class="form-label">Your answer</label>
+                                    <textarea required class="form-control" id="body" name="body" rows="3" placeholder="Write your answer to {{urgent.name}}"></textarea>
+                                    <section id="body" class="form-text">What's the answer?</section>
+                                </section>
+
+                                <button type="submit" class="save-the-message">Send</button>
+                            </form>
+                        </section>
+                    {% endfor %}
+
+                </section>
+                
+            </section>
+        </section>
+        
+        <section class="normal-messages">
+            <section class="normal-header">
+                <h3 class="normal-title">Read the extendable messages</h3>
+                <h5 class="normal-subtitle">Browse and respond to non-urgent requests</h5>
+            </section>
+
+            <section class="normal-group">
+                {% for normal in normals %}
+                    <section class="normal-item">
+                        <h5 class="normal-head-message">{{normal.name}} Has Written:</h5>
+                        <p class="normal-head-body">{{normal.message}}</p>
+                        <p class="normal-foot-date">On {{normal.created_at}}</p>
+                    </section>
+                {% endfor %}
+            </section>
+        </section>
+
+    </main>
+
+{% endblock %}
+{% block js %}<script src="/static/js/message.js"></script>{% endblock %}

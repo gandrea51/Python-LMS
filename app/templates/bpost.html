@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+{% block title %}Books{% endblock %}
+{% block style %}<link rel="stylesheet" href="/static/css/form.css">{% endblock %}
+{% block main %}
+
+
+    <header class="form-header">
+        <section class="form-first-block">
+            <h2 class="form-title">Add a new book to the collection</h2>
+            <h4 class="form-sub">This way you won't lose anything, and you can only benefit from it.</h4>
+        </section>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <section class="form-alt">
+                <section class="form-messages">
+                    <ul class="form-messages-list">
+                        {% for category, message in messages %}
+                            <li class="form-message-item">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </section>
+        {% endif %}
+    {% endwith %}
+
+    <main class="form-main">
+        <section class="form-form">
+            <form method="post" action="/book/create" class="form-modules">
+                <section class="form-group mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input required type="text" class="form-control" id="title" name="title" placeholder="Mrs Dalloway">
+                    <section id="title" class="form-text">What is the title of the book?</section>
+                </section>
+
+                <section class="row">
+                    <section class="col-md-6">
+                        <section class="form-group mb-3">
+                            <label for="author" class="form-label">Author</label>
+                            <input required type="text" class="form-control" id="author" name="author" placeholder="Virginia Woolf">
+                            <section id="author" class="form-text">Who is the author of the book?</section>
+                        </section>
+                    </section>
+                    <section class="col-md-6">
+                        <section class="form-group mb-3">
+                            <label for="genre" class="form-label">Genre</label>
+                            <input required type="text" class="form-control" id="genre" name="genre" placeholder="Novel">
+                            <section id="genre" class="form-text">What is the genre of the book?</section>
+                        </section>
+                    </section>                        
+                </section>
+
+                <section class="form-group mb-3">
+                    <label for="publisher" class="form-label">Publisher</label>
+                    <input required type="text" class="form-control" id="publisher" name="publisher" placeholder="Mondadori">
+                    <section id="publisher" class="form-text">What is the publisher of the book?</section>
+                </section>
+
+                <section class="row">
+                    <section class="col-md-4">
+                        <section class="form-group mb-3">
+                            <label for="language" class="form-label">Language</label>
+                            <select required class="form-select" id="language" name="language">
+                                <option value="Italian">Italian</option>
+                                <option value="English" selected>English</option>
+                                <option value="French">French</option>
+                            </select>
+                            <section id="language" class="form-text">In which language is the book written?</section>
+                        </section>
+                    </section>
+                    <section class="col-md-4">
+                        <section class="form-group mb-3">
+                            <label for="format" class="form-label">Format</label>
+                            <select required class="form-select" id="format" name="format">
+                                <option value="Paper" selected>Paper</option>
+                                <option value="Ebook">Ebook</option>
+                                <option value="Audiobook">Audiobook</option>
+                            </select>
+                            <section id="format" class="form-text">In what format is the book available?</section>
+                        </section>
+                    </section>
+                    <section class="col-md-4">
+                        <section class="form-group mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <select required class="form-select" id="status" name="status">
+                                <option value="Available" selected>Available</option>
+                                <option value="Re-print">Re-print</option>
+                                <option value="Out of stock">Out of stock</option>
+                            </select>
+                            <section id="status" class="form-text">In what status is the book available?</section>
+                        </section>
+                    </section>
+                </section>
+
+                <section class="form-group mb-3">
+                    <label for="keywords" class="form-label">Keywords</label>
+                    <textarea class="form-control" id="keywords" name="keywords" rows="2"></textarea>
+                    <section id="keywords" class="form-text">What are the keywords of the book?</section>
+                </section>
+
+                <section class="form-group mb-3">
+                    <label for="cover" class="form-label"></label>
+                    <input required type="text" class="form-control" id="cover" name="cover" placeholder="/app/bphoto/my_file.jpg">
+                    <section id="cover" class="form-text">What is the file path of the book?</section>
+                </section>
+
+                <button type="submit" class="save-the-data">Confirm</button>
+            </form>
+        </section>
+    </main>
+
+{% endblock %}
+{% block js %}
+    <script src="/static/js/create_book.js"></script>
+{% endblock %}

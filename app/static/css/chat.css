@@ -1,0 +1,236 @@
+/* Stili per il blocco header */
+.chat-header {
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ffae64);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chat-header:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Stili per la sezione interna */
+.chat-head {
+    margin: 0 auto;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+/* Titolo della chat */
+.chat-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Sottotitolo della chat */
+.chat-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ffe4f5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Effetto animato sul sottotitolo */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Effetto responsive */
+@media (max-width: 768px) {
+    .chat-header {
+        padding: 15px;
+    }
+    .chat-title {
+        font-size: 1.5rem;
+    }
+    .chat-subtitle {
+        font-size: 1rem;
+    }
+}
+
+/* Stile principale del blocco */
+.chat-main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    color: rgb(231, 24, 24);
+}
+
+/* Lista delle domande */
+.chat-list {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chat-list:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Stili per le domande */
+.question-block {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.question-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3a15df;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.question-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+}
+
+/* Messaggio "no questions yet" */
+.no-questions {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fffae6;
+    font-style: italic;
+}
+
+/* Scrittura della domanda */
+.chat-write {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Testata della sezione scrittura */
+.chat-write-head {
+    text-align: center;
+    color: white;
+}
+
+.chat-write-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.chat-write-subtitle {
+    font-size: 1.2rem;
+    color: #ffe6f0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Corpo della sezione scrittura */
+.chat-write-body {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.write-message {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+textarea {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    resize: none;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button i {
+    pointer-events: none;
+    font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .chat-main {
+        padding: 15px;
+    }
+    .chat-write-title {
+        font-size: 1.5rem;
+    }
+    textarea {
+        font-size: 0.9rem;
+    }
+    button {
+        width: 40px;
+        height: 40px;
+    }
+}

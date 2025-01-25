@@ -1,0 +1,126 @@
+/* Stile per l'intestazione delle domande */
+.question-header {
+    background: linear-gradient(135deg, #42e695, #3bb2b8);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.question-head {
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.question-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.question-subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #d6f7f2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Stile per il contenuto principale */
+.question-main {
+    padding: 30px;
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Stile per la lista delle domande */
+.question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Stile per ogni domanda */
+.question-item {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.question-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Stile per il nome utente */
+.question-user-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1e90ff;
+    margin-bottom: 5px;
+}
+
+/* Stile per il contenuto della domanda */
+.question-body {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Stile per i dettagli della domanda */
+.question-data {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Area risposte */
+.question-respond-area {
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Bottone rispondere */
+.respond-button {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.respond-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ff6a84, #ff97b8);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .question-header {
+        padding: 15px;
+    }
+    .question-title {
+        font-size: 1.5rem;
+    }
+    .question-subtitle {
+        font-size: 1rem;
+    }
+    .question-main {
+        padding: 20px;
+    }
+    .respond-button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}

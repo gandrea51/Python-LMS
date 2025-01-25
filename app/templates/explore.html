@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block title %}Explore{% endblock %}
+{% block style %}<link rel="stylesheet" href="/static/css/explore.css">{% endblock %}
+{% block main %}
+
+    <header class="explore-header">
+        <h2 class="exp-hd-title">Explore 100Book</h2>
+        <h4 class="exp-hd-sub">Simplifying Development, Empowering Solutions</h4>
+        <h6 class="exp-hd-subspace">Code Smart, Innovate Faster</h6>
+    </header>
+
+    <main class="explore-main">
+        <section class="main-first-area">
+            <section class="block-for-all">
+                <article class="the-books">
+                    <img src="/static/images/exp/book.jpg" alt="The book image" loading="lazy">
+                    <h4 class="the-book-title">Discover the Book</h4>
+                    <p class="the-book-pg">Discover our selection of books: from classics to best-sellers, explore new worlds and exciting stories.</p>
+                    <a href="/book" class="the-book-a">Find out more</a>
+                </article>  
+                <article class="the-spaces">
+                    <img src="/static/images/exp/space.jpg" alt="The space image" loading="lazy">
+                    <h4 class="the-space-title">Discover the Space</h4>
+                    <p class="the-space-pg">Discover the places that NovaLib makes available for you.</p>
+                    <a href="/space" class="the-space-a">Find out more</a>
+                </article>
+                <article class="the-course">
+                    <img src="/static/images/exp/course.jpg" alt="The course image" loading="lazy">
+                    <h4 class="the-course-title">Discover the Course</h4>
+                    <p class="the-course-pg">Book courses that can help you grow and discover more. You can also have access to equipped rooms, dedicated areas and environments ideal for studying, working.</p>
+                    <a href="/course" class="the-course-a">Find out more</a>
+                </article>
+            </section>
+        </section>
+    </main>
+
+{% endblock %}
+{% block js %}<script src="/static/js/explore.js"></script>{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block title %}My profile{% endblock %}
+{% block style %}<link rel="stylesheet" href="/static/css/profile.css">{% endblock %}
+{% block main %}
+
+    <header class="profile-header">
+        <h2 class="prf-hd-title">Explore your profile</h2>
+        <h4 class="prf-hd-sub">Manage and organize your data and loans</h4>
+    </header>
+
+    <main class="profile-main">
+        <section class="profile-container">
+            <section class="profile-left">
+                {% if user.genre == "M" %}
+                <img src="/static/images/intro/man.jpg" alt="User Profile" class="profile-img" />
+                {% else %}
+                <img src="/static/images/intro/woman.jpg" alt="User Profile" class="profile-img" />
+                {% endif %}
+            </section>
+    
+            <section class="profile-right">
+                <article class="user-email">
+                    <h5 class="user-email-title">Your Email</h5>
+                    <p class="user-email-pg">{{user.email}}</p>
+                    <a href="/email" class="user-change">Edit your email</a>
+                </article>
+                <article class="user-password">
+                    <h5 class="user-password-title">Your Password</h5>
+                    <p class="user-password-pg">**********</p>
+                    <a href="/password" class="user-change">Edit your password</a>
+                </article>
+
+                <!--<article class="user-password">
+                    <h5 class="user-password-title">Do you need assistance?</h5>
+                    <p class="user-password-pg">Ask the librarians for help. I am always at your service.</p>
+                    <a href="/chat" class="user-change">Open the chat now</a>
+                </article>-->
+            </section>
+        </section>
+    </main>
+    
+    <!--<footer class="foot-information">
+        <section class="foot-container">
+            <h3 class="foot-title">Need Urgent Help?</h3>
+            <p class="foot-description">If you have any urgent requests, please fill out the form below and we'll get back to you as soon as possible.</p>
+    
+            <form action="/urgent" method="POST" class="urgent-form">
+                <section class="form-group">
+                    <label for="name" class="form-label">Your name</label>
+                    <input required type="text" class="form-control" id="name" name="name" placeholder="Thomas Stearns Eliot">
+                    <section id="name" class="form-text">What's your name?</section>
+                </section>
+    
+                <section class="form-group">
+                    <label for="message" class="form-label">Your message</label>
+                    <textarea required class="form-control" id="message" name="message" rows="3" placeholder="Describe your urgent request"></textarea>
+                    <section id="message" class="form-text">What's your message?</section>
+                </section>
+
+                <button type="submit" class="save-the-message">Confirm</button>
+            </form>
+        </section>
+    </footer>-->
+    
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}The Questions{% endblock %}
+{% block style %}<link rel="stylesheet" href="/static/css/question.css">{% endblock %}
+{% block main %}
+
+    <header class="question-header">
+        <section class="question-head">
+            <h2 class="question-title">Browse through the questions of all readers and not.</h2>
+            <h4 class="question-subtitle">Browse and respond!</h4>
+        </section>
+    </header>
+    
+    <main class="question-main">
+        <section class="question-list">
+            {% for question in questions %}
+                <section class="question-item">
+                    <h6 class="question-user-name">{{question.user.name}} said:</h6>
+                    <p class="question-body">{{ question.content }}</p>
+                    <p class="question-data">On {{question.created_at}}</p>
+                </section>
+
+                {% if not question.answered %}
+                    <section class="question-respond-area">
+                        <a href="" class="respond-button">Answer now</a>
+                    </section>
+                {% endif%}
+            {% endfor %}
+        </section>
+    </main>
+
+{% endblock %}
+{% block js %}<script src="/static/js/question.js"></script>{% endblock %}

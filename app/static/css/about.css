@@ -1,0 +1,229 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ffe29f, #ffa99f, #ff719a);
+    color: #333;
+}
+
+/* Header Section */
+.about-header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 4px solid #ffa99f;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.header-abt {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.abt-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.abt-sub {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+/* Main Section */
+.owr-people {
+    padding: 2rem;
+}
+
+.the-founder, .the-manager, .the-creator, .the-librarians {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(to right, #97e440, #cf953d);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.the-founder::before, .the-manager::before, .the-creator::before, .the-librarians::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Styling for .image-left-of-description and .image-right-of-description */
+
+/* General Style for Images in Oblò (Circular) */
+.image-left-of-description img, 
+.image-right-of-description img {
+    width: 180px; /* Size of the circular images */
+    height: 180px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures image fills the circle without distortion */
+    border: 4px solid #ffa99f; /* Border to highlight the image */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effect */
+}
+
+/* Hover Effect for Images */
+.image-left-of-description img:hover, 
+.image-right-of-description img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* More pronounced shadow */
+}
+
+/* Layout for .image-left-of-description */
+.image-left-of-description {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.image-left-of-description img {
+    margin-right: 1.5rem; /* Space between the image and text */
+}
+
+/* Layout for .image-right-of-description */
+.image-right-of-description {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+    text-align: right; /* Aligns text to the right for consistency */
+}
+
+.image-right-of-description img {
+    margin-left: 1.5rem; /* Space between the image and text */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .image-left-of-description,
+    .image-right-of-description {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Center the text for smaller screens */
+    }
+
+    .image-left-of-description img,
+    .image-right-of-description img {
+        margin: 0 0 1rem 0; /* Adjust spacing for vertical alignment */
+    }
+}
+
+
+.role-title {
+    font-size: 1.8rem;
+    color: #6a11cb;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(106, 17, 203, 0.4);
+}
+
+.person-profile {
+    background: linear-gradient(to left, #97e440, #cf953d);
+    padding: 1.5rem; /* A bit more padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow */
+    display: flex; /* Flexbox layout to align text and image side by side */
+    align-items: center; /* Centers content vertically */
+    gap: 1.5rem; /* Space between the image and text */
+    min-height: 200px; /* Ensures enough vertical space for content */
+    margin-bottom: 2rem; /* Spacing between profiles */
+}
+
+
+
+.person-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2575fc;
+    margin-bottom: 0.5rem;
+}
+
+.person-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Footer Section */
+.about-contact {
+    text-align: center;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: white;
+    padding: 3rem 1rem;
+    border-top: 4px solid #ffa99f;
+}
+
+.contact-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact-sub {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #cce7ff;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #444;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 10px rgba(106, 17, 203, 0.4);
+}
+
+.save-the-message {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.save-the-message:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(255, 154, 158, 0.5);
+}

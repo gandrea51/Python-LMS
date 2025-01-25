@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block title %}Sign in{% endblock %}
+{% block style %}<link rel="stylesheet" href="/static/css/sign.css">{% endblock %}
+{% block main %}
+
+    <header class="sign-header">
+        <section class="sign-first-block">
+            <h2 class="sign-title">Log in to your account to stay up to date</h2>
+            <h4 class="sign-sub">This way you won't lose anything, and you can only benefit from it.</h4>
+        </section>
+    </header>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <section class="sign-alt">
+                <section class="sign-messages">
+                    <ul class="sign-messages-list">
+                        {% for category, message in messages %}
+                            <li class="sign-message-item">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </section>
+        {% endif %}
+    {% endwith %}
+
+    <main class="sign-main">
+        <section class="sign-form">
+            <form method="post" action="/signin" class="sign-modules">
+
+                <section class="form-group mb-3">
+                    <label for="email" class="form-label">Your email</label>
+                    <input required type="email" class="form-control" id="email" name="email" placeholder="jonndoe@email.us">
+                    <section id="email" class="form-text">What's your email?</section>
+                </section>
+
+                <section class="form-group mb-3">
+                    <label for="password" class="form-label">Your password</label>
+                    <input required type="password" class="form-control" id="password" name="password" placeholder="************">
+                    <section id="password" class="form-text">What's your password?</section>
+                </section>
+
+                <section class="form-group mb-3">
+                    <label for="confirm" class="form-label">Repeat your password</label>
+                    <input required type="password" class="form-control" id="confirm" name="confirm" placeholder="************">
+                    <section id="confirm" class="form-text">Repeat: What's your password?</section>
+                </section>
+                
+                <section class="form-group mb-3">
+                    <label class="form-label question-captcha">{{ question }}</label>
+                    <input required type="text" class="form-control" id="answer" name="answer">
+                    <section id="answer" class="form-text">Answer the question?</section>
+                </section>
+
+                <button type="submit" class="save-the-data">Confirm</button>
+            </form>
+        </section>        
+    </main>
+
+    <section class="lack-area">
+        <section class="sign-information-lack">
+            <p class="lack-message">In your haste, have you forgotten that you are not registered yet? No problem, Follow the <a href="/signup" class="change-link">button</a></p>
+        </section>
+    </section>
+
+{% endblock %}
+{% block js %}<script src="/static/js/sign.js"></script>{% endblock %}
