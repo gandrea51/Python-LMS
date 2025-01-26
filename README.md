@@ -59,7 +59,7 @@ Feel free to fork this project, submit issues, or create pull requests. Contribu
 
 ## License
 
-This project is open source and available under the MIT License.
+This project is open source and available Creative Commons license - NC, SA.
 
 ##
 
@@ -124,4 +124,4 @@ Sentiti libero di forkare questo progetto, inviare issue o creare pull request. 
 
 ## Licenza
 
-Questo progetto è open source e disponibile sotto la Licenza MIT.
+Questo progetto è open source e disponibile sotto Licenza Creative Commons - NC, SA.
